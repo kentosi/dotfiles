@@ -224,7 +224,8 @@ bindsym XF86MonBrightnessUp exec "light -A 4; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "light -U 4; notify-send 'brightness down'"
 
 # Touchbar stuff
-exec --no-startup-id killall synclient && synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerHigh=40 TapButton2=0
+# TODO (gav.newalkar) Updated file in /etc/X11. See if it works now. If so then remove this:
+# exec_always --no-startup-id killall synclient && synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerHigh=40 TapButton2=0
 exec --no-startup-id syndaemon -i 0.5 -t -K -R # disables mouse while typing
 
 # Remap capslock/etc
