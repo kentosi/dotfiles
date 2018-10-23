@@ -103,13 +103,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "1:   Terminal"
-set $workspace2 "2:   Chrome"
-set $workspace3 "3:   IntelliJ"
-set $workspace0 "0:   Spotify"
+set $workspace2 "2:   Firefox"
+set $workspace3 "3:   Code"
+set $workspace4 "4:   Spotify"
 
 # assign apps to workspaces. Use xprop to find out the app name.
 assign [class="Google-chrome"] $workspace2
+assign [class="Firefox"] $workspace2
 assign [class="jetbrains-idea"] $workspace3
+
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
@@ -224,8 +226,8 @@ bindsym XF86MonBrightnessUp exec "light -A 4; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "light -U 4; notify-send 'brightness down'"
 
 # Touchbar stuff
-# TODO (gav.newalkar) Updated file in /etc/X11. See if it works now. If so then remove this:
-# exec_always --no-startup-id killall synclient && synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerHigh=40 TapButton2=0
+# TODO (gav.newalkar) Should have worked from /etc/X11 but isn't working. Find out why.
+exec --no-startup-id synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerHigh=40 TapButton2=0
 exec --no-startup-id syndaemon -i 0.5 -t -K -R # disables mouse while typing
 
 # Remap capslock/etc
@@ -238,10 +240,9 @@ exec --no-startup-id nm-applet
 bindsym $mod+Shift+i exec ~/bin/redshift-toggle
 
 #Background
-
-exec_always feh --bg-scale ~/Pictures/Stars-at-night.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Stars-at-night.png
 
 # Shadows with compton
+exec_always --no-startup-id compton -b --config ~/.config/compton.conf
 
-exec compton -b --config ~/.config/compton.conf
-
+exec_always --no-startup-id ~/.screenlayout/my-layout.sh

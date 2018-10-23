@@ -17,3 +17,12 @@ set wrap
 
 " Incremental seraching
 set incsearch
+
+" Stuff needed for vimwiki plugin
+filetype plugin on
+syntax on
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+
+" Split settings
+set splitbelow
+set splitright
