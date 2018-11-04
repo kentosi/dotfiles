@@ -1,0 +1,27 @@
+Fonts: fc-list
+
+File manager: ranger
+
+Hibernate: pm-suspend
+
+Screen tearing: added here:
+/usr/share/X11/xorg.conf.d/20-intel.conf:
+---
+Section "Device"
+  Identifier  "Intel Graphics"
+  Driver      "intel"
+  Option      "TearFree" "true"
+EndSection
+
+screen stuff: xrandr and arandr 
+switching screens:
+xrandr --output HDMI1 --auto --output eDP1 --off
+^ set to --auto or --off
+
+Configuring Spotify to have correct font size
+/var/lib/snapd/desktop/applications/
+sudo vi spotify_spotify.desktop
+(note: don't edit /snap/... similar .desktop files)
+Change Exec like to this:
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib...tify.desktop /snap/bin/spotify --force-device-scale-factor=1.6 %U
+
