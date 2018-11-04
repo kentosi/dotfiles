@@ -13,10 +13,14 @@ Section "Device"
   Option      "TearFree" "true"
 EndSection
 
-screen stuff: xrandr and arandr 
+# screen stuff: xrandr and arandr 
 switching screens:
 xrandr --output HDMI1 --auto --output eDP1 --off
 ^ set to --auto or --off
+Both active:
+xrandr --output HDMI1 --right-of eDP1
+Monitor only:
+xrandr --output eDP1 --off
 
 Configuring Spotify to have correct font size
 /var/lib/snapd/desktop/applications/
