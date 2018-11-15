@@ -15,26 +15,26 @@ general {
         color_bad = "#D8DEE9"
 }
 
-order += "disk /"
+# order += "disk /"
 order += "wireless _first_"
 order += "volume master"
 order += "battery all"
 order += "time"
 
-disk "/" {
-        format = " %avail"
-        prefix_type = "decimal"
-
-        separator = false
-        separator_block_width = 15
-}
+# disk "/" {
+#         format = " %avail"
+#         prefix_type = "decimal"
+# 
+#         separator = false
+#         separator_block_width = 20
+# }
 
 wireless _first_ {
         format_up = " %essid"
         format_down = " <down>"
 
         separator = false
-        separator_block_width = 15
+        separator_block_width = 20
 }
 
 volume master {
@@ -47,7 +47,7 @@ volume master {
         color_degraded = "#EBCB8B"
 
         separator = false
-        separator_block_width = 15
+        separator_block_width = 20
 }
 
 battery all {
@@ -61,7 +61,7 @@ battery all {
         last_full_capacity = true
 
         separator = false
-        separator_block_width = 15
+        separator_block_width = 20
 }
 
 time {

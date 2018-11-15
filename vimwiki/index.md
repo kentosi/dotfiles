@@ -19,7 +19,6 @@ Aim: Thoroughly enjoy using this laptop.
 
 # Fun Things To Try
 
-* [X] Get that cool looking status bar showing here in vim
 * [ ] Get monitor settings working:
     * [ ] Laptop only
     * [ ] Monnitor only
@@ -37,6 +36,7 @@ Aim: Thoroughly enjoy using this laptop.
 
 # Wiki Diary shortcuts
 
+* \ww = come to this wiki
 * \wi = go to *Diary*
     * C+up, C+down = (once in diary entry, go to day before/after)
 * \w\w = create diary entry
