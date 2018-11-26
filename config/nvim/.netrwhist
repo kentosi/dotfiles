@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/gavnewalkar/code/akka-in-action/chapter-up-and-running/src/main/scala/com'
-let g:netrw_dirhist_2='/home/gavnewalkar/code/akka-in-action/chapter-up-and-running/src/main/scala/com/goticks'
-let g:netrw_dirhist_3='/home/gavnewalkar/code/akka-in-action/chapter-up-and-running'
-let g:netrw_dirhist_4='/home/gavnewalkar/.config/tmux/tmux-themepack/powerline/block'
-let g:netrw_dirhist_5='/etc/grub.d'
-let g:netrw_dirhist_6='/home/gavnewalkar/.config/i3'
-let g:netrw_dirhist_7='/home/gavnewalkar/.config'
-let g:netrw_dirhist_8='/home/gavnewalkar/.config/i3status'
-let g:netrw_dirhist_9='/home/gavnewalkar/code/dotfiles/config/rofi'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/gavnewalkar/.config/evolution'

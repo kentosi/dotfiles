@@ -20,18 +20,7 @@ smart_boders no_gaps
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 10
-font pango:DejaVu Sans Mono 10
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+font pango:DejaVu Sans Mono 9
 
 focus_follows_mouse no
 
@@ -108,10 +97,10 @@ set $workspace3 "3:   Code"
 set $workspace9 "9:   Spotify"
 
 # assign apps to workspaces. Use xprop to find out the app name.
-assign [class="Google-chrome"] $workspace2
-assign [class="Firefox"] $workspace2
-assign [class="jetbrains-idea"] $workspace3
-assign [class="Spotify"] $workspace9
+# assign [class="Google-chrome"] $workspace2
+# assign [class="Firefox"] $workspace2
+# assign [class="jetbrains-idea"] $workspace3
+# assign [class="Spotify"] $workspace9
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -161,8 +150,20 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+mode "language" {
+       # reference:
+       # setxkbmap -option 'grp:alt_shift_toggle' -layout us,fr,pt -variant ,azerty,mac
+       bindsym e exec --no-startup-id setxkbmap -layout us
+       bindsym f exec --no-startup-id setxkbmap -layout fr -variant azerty
+       bindsym p exec --no-startup-id setxkbmap -layout pt -variant mac
+
+       # back to normal: Enter or Escape
+       bindsym Return mode "default"
+       bindsym Escape mode "default"
+}
+bindsym $mod+m mode "language"
 
 # Special sizes
 for_window [class="^Anki$"] floating enable
@@ -195,7 +196,6 @@ bar {
     # status_command i3blocks -c ~/.config/i3/i3blocks.conf
     position top
     font pango:DejaVu Sans Mono, FontAwesome5Free Solid 9
-    # font pango:Liberation Mono Powerline, FontAwesome5Fee Solid 10 
 
     colors {
         background $bgdark
@@ -214,9 +214,10 @@ bar {
 # Multimedia keys
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+# You can change output by using tab to find out what alsa_* should be
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec "light -A 2; notify-send 'brightness up'"
@@ -224,7 +225,7 @@ bindsym XF86MonBrightnessDown exec "light -U 2; notify-send 'brightness down'"
 
 # Touchbar stuff
 # TODO (gav.newalkar) Should have worked from /etc/X11 but isn't working. Find out why.
-exec --no-startup-id synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerHigh=40 TapButton2=0
+exec --no-startup-id synclient VertEdgeScroll=0 HorizEdgeScroll=0 VertTwoFingerScroll=1 HorizTwoFingerScroll=1 VertScrollDelta=-111 HorizScrollDelta=-44 PalmDetect=1 PalmMinWidth=2 PalmMinZ=20 FingerLow=30 FingerHigh=40 TapButton2=0 CoastingSpeed=0
 exec --no-startup-id syndaemon -i 0.5 -t -K -R # disables mouse while typing
 
 # Remap capslock/etc

@@ -17,12 +17,9 @@ Aim: Thoroughly enjoy using this laptop.
 * [Tmux Notes](Tmux Notes)
 * [Courses](Courses) to take
 
-# Fun Things To Try
+# Things To Improve
 
-* [ ] Get monitor settings working:
-    * [ ] Laptop only
-    * [ ] Monnitor only
-    * [ ] Both
+* [ ] Get JP input working now
 
 # Wiki shortcuts
 
