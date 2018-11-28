@@ -235,13 +235,13 @@ exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id nm-applet
 
 # Redshift for night-mode
-bindsym $mod+Shift+i exec ~/bin/redshift-toggle
+# You can change lat/long settings in .config/redshift.conf
+exec_always --no-startup-id redshift
 
 #Background
 # exec_always --no-startup-id feh --bg-scale ~/Pictures/Stars-at-night.png
 # exec_always --no-startup-id feh --bg-scale ~/Pictures/marco-xu-1099021-unsplash.jpg
 exec --no-startup-id nitrogen --restore
-
 
 # Shadows with compton
 exec_always --no-startup-id compton -b --config ~/.config/compton.conf
