@@ -1,4 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/gavnewalkar/.config/evolution'
-let g:netrw_dirhist_2='/home/gavnewalkar/.config/redshift'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/usr/local/Cellar/neovim/0.4.3/share/nvim/runtime'
