@@ -23,9 +23,9 @@ set splitright
 set nocompatible
 syntax on
 
-"colorscheme solarized
+colorscheme solarized
 "colorscheme gruvbox
-autocmd vimenter * colorscheme gruvbox
+" autocmd vimenter * colorscheme gruvbox
 set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -36,21 +36,6 @@ set t_Co=256
 
 filetype off
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vimwiki/vimwiki'
-Plugin 'udalov/kotlin-vim'
-" Plugin 'ctrlpvim/ctrlp.vim' <-- can make like Cmd+Shift+R for file search in
-" IntelliJ --> apparently fzf is faster
-" Plugin scrooloose/nerdcommenter <-- can select multi line to comment
-" Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
-" IntelliJ
-
-call vundle#end()
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -59,6 +44,17 @@ Plug 'ThePrimeagen/vim-be-good'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree' " File tree
 Plug 'justinmk/vim-sneak' " Search with 2 chars
+
+Plug 'VundleVim/Vundle.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'vimwiki/vimwiki'
+Plug 'udalov/kotlin-vim'
+" Plugin 'ctrlpvim/ctrlp.vim' <-- can make like Cmd+Shift+R for file search in
+" IntelliJ --> apparently fzf is faster
+" Plugin scrooloose/nerdcommenter <-- can select multi line to comment
+" Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
+" IntelliJ
+
 
 call plug#end()
 

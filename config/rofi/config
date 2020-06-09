@@ -1,8 +1,0 @@
-rofi.theme: /usr/share/rofi/themes/Arc.rasi
-
-! Different moves. use ctrl-tab.
-rofi.modi:drun,run,window
-! rofi.font:DejaVu Sans Mono 16
-rofi.font:DejaVu Sans Mono 20
-rofi.show-icons:true
-rofi.drun-icon-theme:Papirus
