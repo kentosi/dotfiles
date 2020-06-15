@@ -23,9 +23,8 @@ set splitright
 set nocompatible
 syntax on
 
-colorscheme solarized
-"colorscheme gruvbox
-" autocmd vimenter * colorscheme gruvbox
+" colorscheme solarized
+autocmd vimenter * colorscheme gruvbox
 set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
@@ -35,7 +34,6 @@ set t_Co=256
 " Vundle plugin stuff
 
 filetype off
-" set the runtime path to include Vundle and initialize
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -44,6 +42,16 @@ Plug 'ThePrimeagen/vim-be-good'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree' " File tree
 Plug 'justinmk/vim-sneak' " Search with 2 chars
+Plug 'VundleVim/Vundle.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'vimwiki/vimwiki'
+Plug 'udalov/kotlin-vim'
+" Plugin 'ctrlpvim/ctrlp.vim' <-- can make like Cmd+Shift+R for file search in
+" IntelliJ --> apparently fzf is faster
+" Plugin scrooloose/nerdcommenter <-- can select multi line to comment
+" Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
+" IntelliJ
+
 
 Plug 'VundleVim/Vundle.vim'
 Plug 'airblade/vim-gitgutter'
@@ -75,4 +83,11 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | en
 
 source $HOME/.config/nvim/init-coc.vim
 source $HOME/.config/nvim/init-sneak.vim
+
+autocmd BufReadPost *.kt setlocal filetype=kotlin
+
+let g:LanguageClient_serverCommands = {
+    \ 'kotlin': ["kotlin-language-server"],
+    \ }
+
 
