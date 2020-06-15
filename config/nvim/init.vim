@@ -51,19 +51,6 @@ Plug 'udalov/kotlin-vim'
 " Plugin scrooloose/nerdcommenter <-- can select multi line to comment
 " Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
 " IntelliJ
-
-
-Plug 'VundleVim/Vundle.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'vimwiki/vimwiki'
-Plug 'udalov/kotlin-vim'
-" Plugin 'ctrlpvim/ctrlp.vim' <-- can make like Cmd+Shift+R for file search in
-" IntelliJ --> apparently fzf is faster
-" Plugin scrooloose/nerdcommenter <-- can select multi line to comment
-" Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
-" IntelliJ
-
-
 call plug#end()
 
 filetype plugin indent on  " allows auto-indenting depending on file type
