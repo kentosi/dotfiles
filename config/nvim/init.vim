@@ -11,9 +11,10 @@ set nobackup
 set undodir=~/.vim/undo
 set undofile
 
-set number relativenumber " Show line numbers
+set relativenumber " Relative line numbers
 set wrap " Word wrapping
 set incsearch " Incremental seraching
+set ignorecase
 
 " Split settings
 set splitbelow
@@ -51,13 +52,16 @@ Plug 'udalov/kotlin-vim'
 " Plugin scrooloose/nerdcommenter <-- can select multi line to comment
 " Plugin 'airplace/vim-gitgutter <-- shows lines changes in git, like in
 " IntelliJ
+" "fcf" apparently is also a good fast file search plugin : https://github.com/junegunn/fzf/blob/master/README-VIM.md
 call plug#end()
 
 filetype plugin indent on  " allows auto-indenting depending on file type
 
 " Vimwiki config
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md', 'path': '~/Documents/vimwiki'}]
+let g:vimwiki_url_maxsave=0
 
+" Key remapping
 nnoremap H gT
 nnoremap L gt
 
