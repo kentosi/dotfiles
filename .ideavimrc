@@ -1,0 +1,5 @@
+set sneak
+set ignorecase # sneak will this.
+set smartcase # sneak will respect this. switches to case as soon as you enter a capital.
+set relativenumber
+set number
