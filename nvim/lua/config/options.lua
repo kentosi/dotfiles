@@ -1,0 +1,25 @@
+local opt = vim.opt
+
+opt.wrap = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.cmdheight = 1
+opt.swapfile = false
+opt.backup = false
+opt.undodir = vim.fn.expand("~/.config/nvim-new/undo")
+opt.undofile = true
+opt.updatetime = 1000
+opt.number = true
+opt.relativenumber = true
+opt.incsearch = true
+opt.hidden = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.splitbelow = true
+opt.splitright = true
+opt.laststatus = 2
+opt.colorcolumn = "100"
+opt.termguicolors = true
+opt.showmode = false
