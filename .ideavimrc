@@ -1,5 +1,32 @@
 set sneak
-set ignorecase # sneak will this.
-set smartcase # sneak will respect this. switches to case as soon as you enter a capital.
+set ignorecase " sneak will this.
+set smartcase " sneak will respect this. switches to case as soon as you enter a capital.
 set relativenumber
 set number
+
+" These allow intelliJ to use system clipboard
+set clipboard+=unnamed 
+set clipboard+=ideaput
+
+" Key mappings
+"
+" Note: List of commands: http://codecode.fun/blog/2020/01/05/idea-actions-list
+" Also by typing :actionlist (or :actionlist Terminal)
+"
+let mapleader=" "
+
+nnoremap \e :e /Users/gavnewalkar/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+
+nnoremap <leader><ESC> :action HideActiveWindow<CR>
+
+nnoremap <leader>v :action SplitVertically<CR>
+nnoremap <leader>h :action SplitHorizontally<CR>
+nnoremap <leader>> :action MoveEditorToOppositeTabGroup<CR>
+
+" Note you can chain actions with \| Eg:
+" nmap zc :action ReformatCode  \| action RiderUnitTestRunSolutionAction<CR>
+
+
