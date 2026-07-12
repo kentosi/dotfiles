@@ -16,5 +16,10 @@ config.window_decorations = "RESIZE"
 config.initial_cols = 120
 config.initial_rows = 40
 
+config.keys = {
+	{ key = "[", mods = "CMD|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
+	{ key = "]", mods = "CMD|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
+}
+
 return config
 
