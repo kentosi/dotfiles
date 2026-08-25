@@ -20,6 +20,9 @@ config.initial_rows = 40
 config.keys = {
 	{ key = "[", mods = "CMD|SHIFT", action = wezterm.action.ActivateTabRelative(-1) },
 	{ key = "]", mods = "CMD|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
+	-- Option-Left/Right send Alt-b/Alt-f, which zsh/readline interpret as backward-word/forward-word
+	{ key = "LeftArrow", mods = "OPT", action = wezterm.action.SendString("\x1bb") },
+	{ key = "RightArrow", mods = "OPT", action = wezterm.action.SendString("\x1bf") },
 }
 
 -- Let CMD bypass mouse reporting (like the default SHIFT does), so
