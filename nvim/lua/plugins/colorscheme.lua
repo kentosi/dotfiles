@@ -15,5 +15,8 @@ return {
     for _, group in ipairs({ "Normal", "NormalNC", "NormalFloat", "SignColumn", "LineNr", "EndOfBuffer" }) do
       vim.api.nvim_set_hl(0, group, { bg = "none" })
     end
+
+    -- Visual's subtle bg tint barely shows over WezTerm's transparency.
+    vim.api.nvim_set_hl(0, "Visual", { bg = "#7c6f64", fg = "#fbf1c7", bold = true })
   end,
 }
