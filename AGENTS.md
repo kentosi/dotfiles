@@ -19,6 +19,7 @@ Folders with real depth to explain carry their own `AGENTS.md` — read that fil
 | `alacritty/` | `alacritty.yml` — colorscheme only | — |
 | `ghostty/` | `ghostty/config` — font, theme | — |
 | `glow/` | JSON style themes for `glow` (terminal Markdown renderer) | — |
+| `kitty/` | `kitty/kitty.conf` — mirrors the ghostty look (Gruvbox Dark, Hack Nerd Font, translucent bg) | — |
 | `tmux/` | `tmux/tmux.conf` | — |
 | `vimwiki/` | Personal notes/journal in Markdown (vimwiki). Content, not configuration — don't edit unless asked to. | — |
 
