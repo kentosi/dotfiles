@@ -1,8 +1,18 @@
-# font-family="MesloLGF NF"
-font-family="MesloLGS NF"
+font-family = "Hack Nerd Font"
 font-size=14
-# background-opacity=0.7
-# background-blur-radius = 20
+background-opacity = 0.9
+background-blur-radius = 30
+
+# Integrate the tab bar into the titlebar, mirroring wezterm's fancy tab bar
+macos-titlebar-style = tabs
+
+macos-option-as-alt = true
+
+cursor-style = block
+
+# Prevent shell integration from forcing a bar cursor
+shell-integration-features = no-cursor
 
 # theme = Catppuccin Macchiato
 theme = Catppuccin Mocha
+theme = Gruvbox Dark
