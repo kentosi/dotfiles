@@ -4,7 +4,7 @@ This file provides guidance to AI coding agents when working with code in this r
 
 ## What this is
 
-A personal dotfiles repo: one folder per tool, each holding that tool's config file(s) more or less as the tool expects to find them (e.g. `tmux/tmux.conf`, `wezterm/wezterm.lua`). There's no build, lint, or test pipeline, and no `install.sh`/stow setup wiring these into `$HOME` — most of these files are plain backups, not symlinked from their real config location, so a change only takes effect once it's copied (or manually symlinked) to where the tool actually reads from. `claude/CLAUDE.md` is the one exception: it's symlinked live from `~/.claude/CLAUDE.md` (see [`claude/AGENTS.md`](claude/AGENTS.md)). Validate a change by reloading it in the tool itself, not by running anything in this repo.
+A personal dotfiles repo: one folder per tool, each holding that tool's config file(s) more or less as the tool expects to find them (e.g. `tmux/tmux.conf`, `wezterm/wezterm.lua`). There's no build, lint, or test pipeline, and no `install.sh`/stow setup wiring these into `$HOME` — most of these files are plain backups, not symlinked from their real config location, so a change only takes effect once it's copied (or manually symlinked) to where the tool actually reads from. There are two exceptions, both symlinked live: `claude/CLAUDE.md` from `~/.claude/CLAUDE.md` (see [`claude/AGENTS.md`](claude/AGENTS.md)), and the whole `nvim/` folder from `~/.config/nvim` (see [`nvim/AGENTS.md`](nvim/AGENTS.md)). Validate a change by reloading it in the tool itself, not by running anything in this repo.
 
 ## Folders
 

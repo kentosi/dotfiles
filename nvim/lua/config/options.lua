@@ -8,7 +8,6 @@ opt.expandtab = true
 opt.cmdheight = 1
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.fn.expand("~/.config/nvim-new/undo")
 opt.undofile = true
 opt.updatetime = 1000
 opt.number = true

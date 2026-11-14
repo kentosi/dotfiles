@@ -8,12 +8,16 @@ A Neovim configuration written entirely in Lua, using `lazy.nvim` as the plugin 
 
 ## Running / testing changes
 
-This config is not (yet) the user's active `~/.config/nvim` — it lives at a separate path and must be loaded explicitly:
+This folder is the user's live config: `~/.config/nvim` is a symlink to it, so edits take effect on the next Neovim launch with no copying.
 
 ```sh
-NVIM_APPNAME=<this-dir-name> nvim              # interactive, loads this config via XDG config lookup
-NVIM_APPNAME=<this-dir-name> nvim --headless -c 'qa'   # headless smoke test — confirms no load errors, triggers lazy.nvim plugin install/sync
+nvim                          # interactive
+nvim --headless -c 'qa'       # headless smoke test — confirms no load errors, triggers lazy.nvim plugin install/sync
+nvim --headless "+Lazy! restore" +qa   # install plugins at the exact commits in lazy-lock.json (fresh machine)
+nvim --headless "+TSInstallSync! lua vim vimdoc markdown markdown_inline kotlin bash" +qa   # build treesitter parsers synchronously; plain headless runs quit before the async install finishes
 ```
+
+Undo history lives in Neovim's default `stdpath("state")/undo` (`~/.local/state/nvim/undo`), outside this repo.
 
 Useful in-editor checks after a change:
 - `:Lazy` — confirm all plugin specs loaded with no errors, check install/update status
