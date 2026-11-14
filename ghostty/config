@@ -14,5 +14,5 @@ cursor-style = block
 shell-integration-features = no-cursor
 
 # theme = Catppuccin Macchiato
-theme = Catppuccin Mocha
+# theme = Catppuccin Mocha
 theme = Gruvbox Dark

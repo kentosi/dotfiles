@@ -4,7 +4,7 @@ This file provides guidance to AI coding agents when working with code in this r
 
 ## What this is
 
-A personal dotfiles repo: one folder per tool, each holding that tool's config file(s) more or less as the tool expects to find them (e.g. `tmux/tmux.conf`, `wezterm/wezterm.lua`). There's no build, lint, or test pipeline, and no `install.sh`/stow setup wiring these into `$HOME` — most of these files are plain backups, not symlinked from their real config location, so a change only takes effect once it's copied (or manually symlinked) to where the tool actually reads from. There are two exceptions, both symlinked live: `claude/CLAUDE.md` from `~/.claude/CLAUDE.md` (see [`claude/AGENTS.md`](claude/AGENTS.md)), and the whole `nvim/` folder from `~/.config/nvim` (see [`nvim/AGENTS.md`](nvim/AGENTS.md)). Validate a change by reloading it in the tool itself, not by running anything in this repo.
+A personal dotfiles repo: one folder per tool, each holding that tool's config file(s) more or less as the tool expects to find them (e.g. `tmux/tmux.conf`, `wezterm/wezterm.lua`). There's no build, lint, or test pipeline, and no `install.sh`/stow setup wiring these into `$HOME` — most of these files are plain backups, not symlinked from their real config location, so a change only takes effect once it's copied (or manually symlinked) to where the tool actually reads from. There are three exceptions, all symlinked live: `claude/CLAUDE.md` from `~/.claude/CLAUDE.md` (see [`claude/AGENTS.md`](claude/AGENTS.md)), the whole `nvim/` folder from `~/.config/nvim` (see [`nvim/AGENTS.md`](nvim/AGENTS.md)), and `ghostty/config` from `~/.config/ghostty/config`. Validate a change by reloading it in the tool itself, not by running anything in this repo.
 
 ## Folders
 
@@ -17,7 +17,7 @@ Folders with real depth to explain carry their own `AGENTS.md` — read that fil
 | `herdr/` | `herdr` tool config; directory also holds gitignored runtime files | [`herdr/AGENTS.md`](herdr/AGENTS.md) |
 | `claude/` | Canonical, git-tracked copy of the user's *global* Claude Code instructions (`claude/CLAUDE.md`), symlinked live from `~/.claude/CLAUDE.md` | [`claude/AGENTS.md`](claude/AGENTS.md) |
 | `alacritty/` | `alacritty.yml` — colorscheme only | — |
-| `ghostty/` | `ghostty/config` — font, theme | — |
+| `ghostty/` | `ghostty/config` — font, theme; symlinked live from `~/.config/ghostty/config` (reload in Ghostty with Cmd+Shift+,) | — |
 | `glow/` | JSON style themes for `glow` (terminal Markdown renderer) | — |
 | `kitty/` | `kitty/kitty.conf` — mirrors the ghostty look (Gruvbox Dark, Hack Nerd Font, translucent bg) | — |
 | `tmux/` | `tmux/tmux.conf` | — |
